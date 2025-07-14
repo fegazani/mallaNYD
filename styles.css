@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0eaff;
+  margin: 20px;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #4a148c;
+}
+
+.malla-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.ramo {
+  flex: 0 0 auto;
+  min-width: 220px;
+  background-color: #cdb4db;
+  border-radius: 8px;
+  padding: 16px;
+  color: #3c1361;
+  box-shadow: 0 4px 8px rgba(92, 61, 144, 0.3);
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+.ramo.blocked {
+  background-color: #d3d3d3;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.ramo.unlocked {
+  background-color: white;
+  color: #3c1361;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(92, 61, 144, 0.15);
+}
+
+.ramo.approved {
+  background-color: #3c1361;
+  color: white;
+  cursor: default;
+  box-shadow: 0 6px 10px rgba(36, 18, 97, 0.7);
+  text-decoration: line-through;
+}
+
+.ramo .checkmark {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  display: none;
+}
+
+.ramo.approved .checkmark {
+  display: block;
+  color: #d1c4e9;
+}
+
+.ramo h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.ramo small {
+  font-size: 12px;
+  color: #555;
+  display: block;
+  margin-top: 8px;
+}
